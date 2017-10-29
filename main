@@ -1,0 +1,63 @@
+import random
+ 
+ 
+def gra():
+ 
+ 
+    guessesTaken = 0
+ 
+    print('Hello!What is your name?')
+    myName = input()
+ 
+    print(('Well, ' + myName + ', I am thinking of a number between 1 and 100.'))
+    print ('You have 6 guesses')
+    a = 1
+    b = 100
+ 
+    while guessesTaken < 6:
+        print('Take a guess.')
+        guess = input()
+        guess = int(guess)
+ 
+        guessesTaken = guessesTaken + 1
+        guessesLeft = 6 - guessesTaken
+ 
+        if int(guess - a) <= int((b - a) / 2):
+            print('Your guess is too low.')
+            print ('You have ' + str(guessesLeft) + ' more guesses')
+            if a < guess:
+                a = guess
+            else:
+                a = a
+ 
+ 
+ 
+        if int(guess - a) > int((b - a) / 2):
+            print('Your guess is too high.')
+            print ('You have ' + str(guessesLeft) + ' more guesses')
+            if b > guess:
+                b = guess
+            else:
+                b = b
+ 
+    if a == 1 and b == 2:
+        number = 1
+    if int(b - 1) - (a + 1) == 2:
+        number = int(a + 2)
+    else:
+        number = random.randint(int(a + 1), int(b - 1))
+ 
+ 
+    if guess == number:
+        guessesTaken = str(guessesTaken)
+        print(('Good job, ' + myName + '! You guessed my number in '
+         + guessesTaken + ' guesses!'))
+    if guess != number:
+        number = str(number)
+        print(('Nope. The number I was thinking of was ' + number))
+ 
+playAgain = 'yes'
+while playAgain == 'yes' or playAgain == 'y':
+    gra()
+    print('Do you want to play again? (yes or no)')
+    playAgain = input()
