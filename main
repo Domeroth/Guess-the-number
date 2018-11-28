@@ -29,7 +29,7 @@ while guessesTaken < GUESSES:
 		print('Your guess is too low.')
 		print ('You have ' + str(guessesLeft) + ' more guesses')
 		if a < guess:
-			a = guess
+			a = guess +1
 		else:
 			a = a
 		print(str('My number is between ' + str(a) + " and " + str(b) + "." ))
@@ -39,7 +39,7 @@ while guessesTaken < GUESSES:
 		print('Your guess is too high.')
 		print ('You have ' + str(guessesLeft) + ' more guesses')
 		if b > guess:
-			b = guess
+			b = guess -1
 		else:
 			b = b
 		print(str('My number is between ' + str(a) + " and " + str(b) + "." ))
