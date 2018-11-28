@@ -1,10 +1,8 @@
 import random
 import math
-#a = random.randint(1, 300)
-a = 1
+a = random.randint(1, 300)
 a2 = random.randint(50, 200)
-b = 25
-#b = a + a2
+b = a + a2
 c = math.log(b-a,2)
 d = math.floor(c)
 GUESSES = d
