@@ -1,8 +1,10 @@
 import random
 import math
-a = random.randint(1, 300)
+#a = random.randint(1, 300)
+a = 1
 a2 = random.randint(50, 200)
-b = a + a2
+b = 25
+#b = a + a2
 c = math.log(b-a,2)
 d = math.floor(c)
 GUESSES = d
@@ -48,7 +50,7 @@ if int(b - 1) - (a + 1) == 2:
 	number = int(a + 2)
  
 else:
-	number = random.randint(int(a + 1), int(b - 1) )
+	number = random.randint(int(a), int(b) )
  
  
 if guess == number:
